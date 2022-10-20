@@ -1,10 +1,9 @@
-'use strict';
+const fs = require('fs')
+const path = require('path');
 
-var fs = require('fs'),
-	path = require('path');
+function tree(filepath, ignore) {
 
-
-function tree(filepath) {
+	if (!ignore) ignore = []
 
 	filepath = path.normalize(filepath);
 
@@ -15,10 +14,13 @@ function tree(filepath) {
 		};
 
 	if (stats.isDirectory()) {
+		for (var file in ignore){
+			if (filepath.includes(file)) return
+		}
 		result.type = "folder";
 
 		result.children = fs.readdirSync(filepath).map(function(child) {
-			return tree(filepath + '/' + child);
+			return tree(filepath + '/' + child, ignore);
 		});
 
 	} else {

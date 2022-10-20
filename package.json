@@ -11,24 +11,20 @@
     "recursive",
     "readdir"
   ],
-  "author": "aji",
-  "bin": {
-    "tree-json": "cli.js"
-  },
+  "authors": ["aji", "airplanegobrr"],
   "engines": {
     "node": ">=0.10.0"
   },
   "files": [
-    "index.js",
-    "cli.js"
+    "index.js"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/niceaji/tree-json.git"
+    "url": "git://github.com/AirplaneGobrr-Trash/tree-json.git"
   },
   "bugs": {
-    "url": "https://github.com/niceaji/tree-json/issues"
+    "url": "https://github.com/AirplaneGobrr-Trash/tree-json/issues"
   },
-  "homepage": "https://github.com/niceaji/tree-json"
+  "homepage": "https://github.com/AirplaneGobrr-Trash/tree-json"
 }
